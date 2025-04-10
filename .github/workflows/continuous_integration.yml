@@ -179,9 +179,9 @@ on:
         default: 'false'
         type: string
     secrets:
-      # coverage_deploy_token:
-        # description: 'The token to use to deploy the coverage report'
-        # required: true
+      coverage_deploy_token:
+        description: 'The token to use to deploy the coverage report'
+        required: true
       SA_GITHUB_SSH_KEY:
         description: 'The ssh key to use for git operations'
         required: false
