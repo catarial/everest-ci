@@ -86,7 +86,7 @@ jobs:
         repository: ${{ github.repository }} 
         path: source
         ref: ${{ inputs.github_ref_after }}
-        token: ${{secrets.GITHUB_REPOSITORY_PAT}}
+        # token: ${{secrets.GITHUB_REPOSITORY_PAT}}
         fetch-depth: 0
     - name: Validate github_ref_before and github_ref_after
       if: ${{ inputs.force_rebuild == false }}
@@ -176,7 +176,7 @@ jobs:
         repository: ${{ github.repository }} 
         path: source
         ref: ${{github.ref}}
-        token: ${{secrets.GITHUB_REPOSITORY_PAT}}
+        # token: ${{secrets.GITHUB_REPOSITORY_PAT}}
         fetch-depth: 0
     - name: Get context / Path of Dockerfile
       id: get-context
