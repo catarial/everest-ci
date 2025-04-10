@@ -240,7 +240,7 @@ jobs:
         with:
           repository-name:  everest/everest-ci
           file-name: continuous_integration.yml
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Determine latest tag of everest-ci
         id: set_tag_everest_ci
         env:
