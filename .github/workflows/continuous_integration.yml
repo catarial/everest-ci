@@ -307,7 +307,7 @@ jobs:
           repository: ${{ github.repository }}
           path: source
           ref: ${{ github.ref }}
-          token: ${{ github.token}}
+          # token: ${{ github.token}}
           fetch-depth: 0
       - name: Docker Meta
         id: meta
@@ -465,7 +465,7 @@ jobs:
         uses: ./everest-ci/github-actions/deploy-ci-artifact
         with:
           target_repo: ${{ inputs.artifact_deploy_target_repo }}
-          github_token: ${{ secrets.coverage_deploy_token }}
+          # github_token: ${{ secrets.coverage_deploy_token }}
           artifact_name: coverage-report
           artifact_directory: ${{ inputs.coverage_report_path }}
       - name: Write summary coverage
@@ -625,7 +625,7 @@ jobs:
         if: ${{ needs.setup-env.outputs.is_fork == 'false' }}
         with:
           target_repo: ${{ inputs.artifact_deploy_target_repo }}
-          github_token: ${{ secrets.coverage_deploy_token }}
+          # github_token: ${{ secrets.coverage_deploy_token }}
           artifact_name: coverage-badge
           artifact_directory: ${{ github.workspace }}/coverage-badge/
           deploy_global_artifact: true
@@ -640,7 +640,7 @@ jobs:
         if: ${{ needs.setup-env.outputs.is_fork == 'false' }}
         with:
           target_repo: ${{ inputs.artifact_deploy_target_repo }}
-          github_token: ${{ secrets.coverage_deploy_token }}
+          # github_token: ${{ secrets.coverage_deploy_token }}
           artifact_name: coverage-report
           artifact_directory: ${{ github.workspace }}/coverage-report/
           deploy_global_artifact: true
