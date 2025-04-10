@@ -218,8 +218,8 @@ jobs:
       if: ${{ needs.check.outputs.rebuild == 'true' || inputs.force_rebuild }}
       with:
         registry: ${{ inputs.docker_registry }}
-        username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
-        password: ${{ secrets.DOCKER_REGISTRY_PAT }}
+        # username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
+        # password: ${{ secrets.DOCKER_REGISTRY_PAT }}
     - name: Build and push
       uses: docker/build-push-action@v6
       if: ${{ needs.check.outputs.rebuild == 'true' || inputs.force_rebuild }}
