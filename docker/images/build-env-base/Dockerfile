@@ -3,13 +3,13 @@ ARG BASE_IMAGE_TAG=latest
 FROM ghcr.io/catarial/everest-ci/run-env-base:${BASE_IMAGE_TAG}
 
 # renovate: datasource=repology depName=debian_12/git versioning=loose
-ENV GIT_VERSION=1:2.39.5-0+deb12u1
+ENV GIT_VERSION=1:2.39.5-0+deb12u2
 # renovate: datasource=repology depName=debian_12/curl versioning=loose
-ENV CURL_VERSION=7.88.1-10+deb12u7
+ENV CURL_VERSION=7.88.1-10+deb12u12
 # renovate: datasource=repology depName=debian_12/rsync versioning=loose
-ENV RSYNC_VERSION=3.2.7-1
+ENV RSYNC_VERSION=3.2.7-1+deb12u2
 # renovate: datasource=repology depName=debian_12/ninja-build versioning=loose
-ENV NINJA_BUILD_VERSION=1.11.1-1
+ENV NINJA_BUILD_VERSION=1.11.1-2~deb12u1
 # renovate: datasource=repology depName=debian_12/make-dfsg versioning=loose
 ENV MAKE_VERSION=4.3-4.1
 # renovate: datasource=repology depName=debian_12/cmake versioning=loose
